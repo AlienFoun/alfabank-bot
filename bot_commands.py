@@ -1,5 +1,12 @@
-COMMAND_FILTER = ['/combo', '/bs', '/cp', '/selfie', '/combo@AlfaBank_staff_Bot', '/bs@AlfaBank_staff_Bot',
-				  '/cp@AlfaBank_staff_Bot', '/selfie@AlfaBank_staff_Bot']
+from constants import BOT_NAME
 
-COMMAND_TO_COLUMN = {'/combo': 'D', '/bs': 'E', '/cp': 'F', '/selfie': 'G'}
+COMMAND_COMBO = '/combo'
+COMMAND_BROKERAGE_ACCOUNT = '/bs'  # Abbreviation for Brokerage account in Russian // Брокерский счет
+COMMAND_DIGITAL_PROFILE = '/cp'  # Abbreviation for Digital Profile in Russian // Цифровой профиль
+COMMAND_SELFIE = '/selfie'
+
+COMMAND_FILTER = [COMMAND_COMBO, COMMAND_COMBO+BOT_NAME, COMMAND_BROKERAGE_ACCOUNT, COMMAND_BROKERAGE_ACCOUNT+BOT_NAME,
+				  COMMAND_DIGITAL_PROFILE, COMMAND_DIGITAL_PROFILE+BOT_NAME, COMMAND_SELFIE, COMMAND_SELFIE+BOT_NAME]
+
+COMMAND_TO_COLUMN = {COMMAND_COMBO: 'D', COMMAND_BROKERAGE_ACCOUNT: 'E', COMMAND_DIGITAL_PROFILE: 'F', COMMAND_SELFIE: 'G'}
 
